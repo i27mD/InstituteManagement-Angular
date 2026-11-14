@@ -1,0 +1,37 @@
+<div class="login-wrapper">
+  <div class="login-container">
+    <h2 class="login-title">CourseHub Login</h2>
+    
+    <!-- رسالة الخطأ -->
+    <div class="error-message" *ngIf="errorMessage">
+      {{ errorMessage }}
+    </div>
+    
+    <!-- حقول الإدخال -->
+    <div class="form-group">
+      <input type="text" [(ngModel)]="credentials.username" placeholder="Username" class="custom-input" />
+    </div>
+    
+    <div class="form-group">
+      <input type="password" [(ngModel)]="credentials.password" placeholder="Password" class="custom-input" />
+    </div>
+    
+    <!-- زر الدخول (Outline Button) -->
+    <button (click)="onSubmit()" class="outline-btn">Login</button>
+
+    <!-- قسم المطورين -->
+    <div class="developers-section">
+      <p class="dev-title">Developed By CS G1:</p>
+      <ul class="dev-list">
+        <li>Ahmed Jamal Bajafar</li>
+        <li>Salem Abdullah Bin Jabal</li>
+        <li>Mohammed yslam baslib</li>
+        <li>Abdullah Ahmed Bakarmoom</li>
+        <li>Ahmed Ali Al-Biti</li>
+        <li>Ahmed Marie Al-Hamdi</li>
+        <li>Ahmed Mohammed Bataweel</li>
+      </ul>
+    </div>
+
+  </div>
+</div>

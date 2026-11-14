@@ -1,0 +1,66 @@
+<div class="page-wrapper">
+  <h2 class="page-title">Manage Enrollments</h2>
+
+  <!-- صندوق إضافة/تعديل تسجيل -->
+  <div class="form-card">
+    <h3 class="form-title">{{ currentEnrollment.enrollmentId === 0 ? 'Add New Enrollment' : 'Edit Enrollment' }}</h3>
+    
+    <div class="form-row">
+      <input type="number" [(ngModel)]="currentEnrollment.studentId" placeholder="Student ID" class="custom-input small-input" />
+      <input type="number" [(ngModel)]="currentEnrollment.courseId" placeholder="Course ID" class="custom-input small-input" />
+      
+      <!-- أزرار الحفظ والإلغاء -->
+      <button (click)="saveEnrollment()" class="outline-btn btn-primary">
+        {{ currentEnrollment.enrollmentId === 0 ? 'Save' : 'Update' }}
+      </button>
+      <button (click)="resetForm()" class="outline-btn btn-secondary">Clear</button>
+    </div>
+  </div>
+
+  <!-- قسم البحث -->
+  <div class="search-section">
+    <input type="text" [(ngModel)]="searchKeyword" placeholder="Search by status..." class="custom-input search-input" />
+    <button (click)="search()" class="outline-btn btn-primary search-btn">Search</button>
+  </div>
+
+  <!-- جدول عرض البيانات -->
+  <div class="table-container">
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th>Enrollment ID</th>
+          <th>Student ID</th>
+          <th>Course ID</th>
+          <th>Date</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let enr of enrollmentsList">
+          <td>{{ enr.enrollmentId }}</td>
+          <td>{{ enr.studentId }}</td>
+          <td>{{ enr.courseId }}</td>
+          <td>{{ enr.enrollmentDate | date:'shortDate' }}</td>
+          
+          <!-- عرض الحالة كملصق احترافي (Badge) -->
+          <td>
+            <span class="status-badge" 
+                  [class.status-active]="enr.status === 'Active'" 
+                  [class.status-dropped]="enr.status === 'Dropped'">
+              {{ enr.status }}
+            </span>
+          </td>
+          
+          <td class="action-cell">
+            <!-- أزرار العمليات (أزرق، برتقالي، بنفسجي، أحمر) -->
+            <button (click)="viewEnrollment(enr.enrollmentId)" class="action-btn btn-view">View</button>
+            <button (click)="editEnrollment(enr)" class="action-btn btn-edit">Edit</button>
+            <button (click)="changeStatus(enr.enrollmentId)" class="action-btn btn-status">Status</button>
+            <button (click)="delete(enr.enrollmentId)" class="action-btn btn-delete">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

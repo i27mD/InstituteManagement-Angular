@@ -1,0 +1,57 @@
+<div class="page-wrapper">
+  <h2 class="page-title">Manage Students</h2>
+
+  <!-- صندوق إضافة/تعديل طالب (Form Card) -->
+  <div class="form-card">
+    <h3 class="form-title">{{ currentStudent.studentId === 0 ? 'Add New Student' : 'Edit Student' }}</h3>
+    
+    <div class="form-row">
+      <input type="text" [(ngModel)]="currentStudent.fullName" placeholder="Full Name" class="custom-input" />
+      <input type="email" [(ngModel)]="currentStudent.email" placeholder="Email" class="custom-input" />
+      <input type="text" [(ngModel)]="currentStudent.phone" placeholder="Phone" class="custom-input" />
+      
+      <!-- أزرار الحفظ والإلغاء -->
+      <button (click)="saveStudent()" class="outline-btn btn-primary">
+        {{ currentStudent.studentId === 0 ? 'Save' : 'Update' }}
+      </button>
+      <button (click)="resetForm()" class="outline-btn btn-secondary">Clear</button>
+    </div>
+  </div>
+
+  <!-- قسم البحث -->
+  <div class="search-section">
+    <input type="text" [(ngModel)]="searchKeyword" placeholder="Search by name or email..." class="custom-input search-input" />
+    <button (click)="search()" class="outline-btn btn-primary search-btn">Search</button>
+  </div>
+
+  <!-- جدول عرض البيانات -->
+  <div class="table-container">
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Full Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Join Date</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of studentsList">
+          <td>{{ student.studentId }}</td>
+          <td>{{ student.fullName }}</td>
+          <td>{{ student.email }}</td>
+          <td>{{ student.phone }}</td>
+          <td>{{ student.joinDate | date:'shortDate' }}</td>
+          <td class="action-cell">
+            <!-- أزرار العمليات بالاستثناء الذي طلبته -->
+            <button (click)="view(student.studentId)" class="action-btn btn-view">View</button>
+            <button (click)="edit(student)" class="action-btn btn-edit">Edit</button>
+            <button (click)="delete(student.studentId)" class="action-btn btn-delete">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

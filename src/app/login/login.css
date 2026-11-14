@@ -1,0 +1,126 @@
+/* إعدادات الشاشة */
+.login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #CAD2C5; /* Ash Grey */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-container {
+  background-color: #ffffff;
+  padding: 40px;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(47, 62, 70, 0.15);
+  text-align: center;
+}
+
+.login-title {
+  color: #2F3E46; /* Charcoal Blue */
+  margin-bottom: 25px;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.custom-input {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  color: #2F3E46;
+  background-color: #f8f9fa; /* لون خلفية فاتح جداً ليميز الحقل */
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-input:hover {
+  border-color: #354F52; /* Dark Slate Grey */
+}
+
+.custom-input:focus {
+  border-color: #2F3E46; /* Charcoal Blue */
+  outline: none;
+  background-color: #ffffff;
+  box-shadow: 0 0 8px rgba(47, 62, 70, 0.2);
+}
+
+/* =========================================
+   الزر (Outline Button) - التصحيح الجذري
+========================================= */
+.outline-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: transparent !important; 
+  color: #2F3E46 !important; /* لون النص كحلي غامق */
+  border: 2px solid #2F3E46 !important; /* إطار كحلي غامق */
+  border-radius: 10px; 
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 10px;
+}
+
+/* تأثير الـ Hover القوي */
+.outline-btn:hover {
+  background-color: #2F3E46 !important; /* خلفية كحلي غامق واضحة */
+  color: #ffffff !important; /* نص أبيض ناصع */
+  border-color: #2F3E46 !important;
+  box-shadow: 0 6px 15px rgba(47, 62, 70, 0.4);
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   تنسيق قسم المطورين
+========================================= */
+.developers-section {
+  margin-top: 35px;
+  padding-top: 20px;
+  border-top: 2px solid #CAD2C5; 
+}
+
+.dev-title {
+  color: #354F52;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.dev-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dev-list li {
+  color: #52796F;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.8;
+  transition: all 0.2s ease;
+}
+
+.dev-list li:hover {
+  color: #2F3E46;
+  transform: scale(1.02);
+}

@@ -1,0 +1,42 @@
+<div class="dashboard-wrapper">
+  <!-- رأس الصفحة -->
+  <div class="dashboard-header">
+    <h2>Institute Dashboard</h2>
+    <p>Welcome to the Institute Management System. Here is an overview of the current data:</p>
+  </div>
+
+  <!-- حاوية البطاقات (Grid) -->
+  <div class="cards-grid">
+    
+    <!-- بطاقة الطلاب -->
+    <div class="stat-card card-students">
+      <h3>Total Students</h3>
+      <h1>{{ studentsCount }}</h1>
+    </div>
+
+    <!-- بطاقة المدرسين -->
+    <div class="stat-card card-teachers">
+      <h3>Total Teachers</h3>
+      <h1>{{ teachersCount }}</h1>
+    </div>
+
+    <!-- بطاقة الدورات -->
+    <div class="stat-card card-courses">
+      <h3>Total Courses</h3>
+      <h1>{{ coursesCount }}</h1>
+    </div>
+
+    <!-- بطاقة التسجيلات -->
+    <div class="stat-card card-enrollments">
+      <h3>Total Enrollments</h3>
+      <h1>{{ enrollmentsCount }}</h1>
+    </div>
+
+    <!-- بطاقة المستخدمين -->
+    <div class="stat-card card-users">
+      <h3>System Users</h3>
+      <h1>{{ usersCount }}</h1>
+    </div>
+
+  </div>
+</div>

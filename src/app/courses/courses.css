@@ -1,0 +1,220 @@
+/* =========================================
+   الإعدادات العامة للصفحة
+========================================= */
+.page-wrapper {
+  padding: 1rem 3rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.page-title {
+  color: #2F3E46; /* Charcoal Blue */
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #84A98C; /* Muted Teal */
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* =========================================
+   صندوق الفورم (إضافة / تعديل)
+========================================= */
+.form-card {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-left: 5px solid #84A98C; /* خط جانبي تجميلي بلون مختلف يميز الدورات */
+  margin-bottom: 25px;
+}
+
+.form-title {
+  color: #354F52;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+}
+
+/* ترتيب حقول التاريخ */
+.date-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.input-label {
+  color: #354F52;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* =========================================
+   حقول الإدخال والبحث
+========================================= */
+.custom-input {
+  flex: 1;
+  min-width: 180px;
+  padding: 10px 15px;
+  font-size: 0.95rem;
+  color: #2F3E46;
+  background-color: #f8f9fa;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.custom-input:focus {
+  border-color: #52796F;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(82, 121, 111, 0.2);
+}
+
+/* تخصيص لحقل التاريخ ورقم المدرس */
+.date-input {
+  min-width: 130px;
+}
+
+.small-input {
+  max-width: 120px;
+  min-width: 100px;
+}
+
+.search-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.search-input {
+  max-width: 350px;
+}
+
+/* =========================================
+   الأزرار العامة (Outline)
+========================================= */
+.outline-btn {
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: transparent !important;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  color: #2F3E46 !important;
+  border: 2px solid #2F3E46 !important;
+}
+
+.btn-primary:hover {
+  background-color: #2F3E46 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 8px rgba(47, 62, 70, 0.3);
+}
+
+.btn-secondary {
+  color: #84A98C !important;
+  border: 2px solid #84A98C !important;
+}
+
+.btn-secondary:hover {
+  background-color: #84A98C !important;
+  color: #ffffff !important;
+}
+
+/* =========================================
+   تصميم الجدول (Table)
+========================================= */
+.table-container {
+  overflow-x: auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.custom-table th, .custom-table td {
+  padding: 15px 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.custom-table th {
+  background-color: #2F3E46; 
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.custom-table tr:hover {
+  background-color: #f1f4f2; 
+}
+
+/* =========================================
+   أزرار العمليات (View, Edit, Delete)
+========================================= */
+.action-cell {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: transparent !important; 
+  transition: all 0.3s ease;
+}
+
+/* زر العرض - أزرق (Modern Blue) */
+.btn-view {
+  color: #2980b9 !important;
+  border: 1px solid #2980b9 !important;
+}
+.btn-view:hover {
+  background-color: #2980b9 !important;
+  color: #ffffff !important;
+}
+
+/* زر التعديل - برتقالي (Modern Orange) */
+.btn-edit {
+  color: #e67e22 !important;
+  border: 1px solid #e67e22 !important;
+}
+.btn-edit:hover {
+  background-color: #e67e22 !important;
+  color: #ffffff !important;
+}
+
+/* زر الحذف - أحمر (Modern Red) */
+.btn-delete {
+  color: #e74c3c !important;
+  border: 1px solid #e74c3c !important;
+}
+.btn-delete:hover {
+  background-color: #e74c3c !important;
+  color: #ffffff !important;
+}
+
+/* حركة دخول ناعمة */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

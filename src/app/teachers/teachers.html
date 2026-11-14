@@ -1,0 +1,58 @@
+<div class="page-wrapper">
+  <h2 class="page-title">Manage Teachers</h2>
+
+  <!-- صندوق إضافة/تعديل مدرس -->
+  <div class="form-card">
+    <h3 class="form-title">{{ currentTeacher.teacherId === 0 ? 'Add New Teacher' : 'Edit Teacher' }}</h3>
+    
+    <div class="form-row">
+      <input type="text" [(ngModel)]="currentTeacher.fullName" placeholder="Full Name" class="custom-input" />
+      <input type="email" [(ngModel)]="currentTeacher.email" placeholder="Email" class="custom-input" />
+      <input type="text" [(ngModel)]="currentTeacher.phone" placeholder="Phone" class="custom-input" />
+      <input type="text" [(ngModel)]="currentTeacher.specialization" placeholder="Specialization" class="custom-input" />
+      
+      <!-- أزرار الحفظ والإلغاء -->
+      <button (click)="saveTeacher()" class="outline-btn btn-primary">
+        {{ currentTeacher.teacherId === 0 ? 'Save' : 'Update' }}
+      </button>
+      <button (click)="resetForm()" class="outline-btn btn-secondary">Clear</button>
+    </div>
+  </div>
+
+  <!-- قسم البحث -->
+  <div class="search-section">
+    <input type="text" [(ngModel)]="searchKeyword" placeholder="Search by name or specialty..." class="custom-input search-input" />
+    <button (click)="search()" class="outline-btn btn-primary search-btn">Search</button>
+  </div>
+
+  <!-- جدول عرض البيانات -->
+  <div class="table-container">
+    <table class="custom-table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Full Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Specialization</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let teacher of teachersList">
+          <td>{{ teacher.teacherId }}</td>
+          <td>{{ teacher.fullName }}</td>
+          <td>{{ teacher.email }}</td>
+          <td>{{ teacher.phone }}</td>
+          <td>{{ teacher.specialization }}</td>
+          <td class="action-cell">
+            <!-- أزرار العمليات (Outline) بالاستثناء الذي طلبته -->
+            <button (click)="viewTeacher(teacher.teacherId)" class="action-btn btn-view">View</button>
+            <button (click)="editTeacher(teacher)" class="action-btn btn-edit">Edit</button>
+            <button (click)="delete(teacher.teacherId)" class="action-btn btn-delete">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

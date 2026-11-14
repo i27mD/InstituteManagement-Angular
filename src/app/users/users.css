@@ -1,0 +1,227 @@
+/* =========================================
+   الإعدادات العامة للصفحة
+========================================= */
+.page-wrapper {
+  padding: 1rem 3rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.page-title {
+  color: #2F3E46; 
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #84A98C; 
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* =========================================
+   صندوق الفورم
+========================================= */
+.form-card {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-left: 5px solid #d62828; /* خط أحمر ناعم يرمز لحساسية صفحة المستخدمين */
+  margin-bottom: 25px;
+}
+
+.form-title {
+  color: #354F52;
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+}
+
+/* =========================================
+   حقول الإدخال والبحث والقائمة المنسدلة
+========================================= */
+.custom-input {
+  flex: 1;
+  min-width: 180px;
+  padding: 10px 15px;
+  font-size: 0.95rem;
+  color: #2F3E46;
+  background-color: #f8f9fa;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.custom-input:focus {
+  border-color: #52796F;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(82, 121, 111, 0.2);
+}
+
+/* تنسيق خاص للقائمة المنسدلة */
+.custom-select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%232F3E46%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px top 50%;
+  background-size: 12px auto;
+}
+
+.search-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.search-input {
+  max-width: 350px;
+}
+
+/* =========================================
+   الأزرار العامة (Outline)
+========================================= */
+.outline-btn {
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: transparent !important;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  color: #2F3E46 !important;
+  border: 2px solid #2F3E46 !important;
+}
+
+.btn-primary:hover {
+  background-color: #2F3E46 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 8px rgba(47, 62, 70, 0.3);
+}
+
+.btn-secondary {
+  color: #84A98C !important;
+  border: 2px solid #84A98C !important;
+}
+
+.btn-secondary:hover {
+  background-color: #84A98C !important;
+  color: #ffffff !important;
+}
+
+/* =========================================
+   تصميم الجدول وملصقات الرتب (Role Badges)
+========================================= */
+.table-container {
+  overflow-x: auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.custom-table th, .custom-table td {
+  padding: 15px 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.custom-table th {
+  background-color: #2F3E46; 
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.custom-table tr:hover {
+  background-color: #f1f4f2; 
+}
+
+/* ملصقات الرتب */
+.role-badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.role-expert {
+  background-color: #ffebee;
+  color: #c62828;
+  border: 1px solid #ffcdd2;
+}
+
+.role-admin {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #c8e6c9;
+}
+
+/* =========================================
+   أزرار العمليات (View, Edit, Delete)
+========================================= */
+.action-cell {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: transparent !important; 
+  transition: all 0.3s ease;
+}
+
+/* أزرق */
+.btn-view {
+  color: #2980b9 !important;
+  border: 1px solid #2980b9 !important;
+}
+.btn-view:hover {
+  background-color: #2980b9 !important;
+  color: #ffffff !important;
+}
+
+/* برتقالي */
+.btn-edit {
+  color: #e67e22 !important;
+  border: 1px solid #e67e22 !important;
+}
+.btn-edit:hover {
+  background-color: #e67e22 !important;
+  color: #ffffff !important;
+}
+
+/* أحمر */
+.btn-delete {
+  color: #e74c3c !important;
+  border: 1px solid #e74c3c !important;
+}
+.btn-delete:hover {
+  background-color: #e74c3c !important;
+  color: #ffffff !important;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
